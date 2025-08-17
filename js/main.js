@@ -40,13 +40,14 @@
 
 //src update
 (() => {
+  const logoImage = document.querySelector('.js_main_planet_img');
 
   function updateLogoFor768() {
     if (window.innerWidth <= 768) {
-      const logoImage = document.querySelector('.main_planet img');
-      logoImage.src = './img/img/first/planet-768.png';
+      
+      logoImage.src = './img/img/first/planet-768.webp';
     }else {
-        logoImage.src = './img/img/first/planet.png';
+        logoImage.src = './img/img/first/planet.webp';
       }
     
   }
@@ -190,6 +191,33 @@
   document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('siteLanguage') || 'ru';
     applyLanguage(savedLang);
+    let languageBtn = document.querySelector('.js_language');
+    let langEn = document.querySelector('.js_language_item-en');
+    let langRu = document.querySelector('.js_language_item-ru');
+    let langBoxBurger = document.querySelector('.js_menu_language_btn');
+
+    if(savedLang == 'ru'){
+      languageBtn.querySelector('span').innerHTML = 'ru';
+      languageBtn.querySelector('i').classList.remove('flag_en');
+      languageBtn.querySelector('i').classList.add('flag_ru');
+      langEn.classList.remove('active');
+      langRu.classList.add('active');
+
+      langBoxBurger.querySelector('i').classList.remove('flag_en');
+      langBoxBurger.querySelector('i').classList.add('flag_ru');
+      langBoxBurger.querySelector('p').innerHTML = 'ru';
+    }else{
+      languageBtn.querySelector('span').innerHTML = 'en';
+      languageBtn.querySelector('i').classList.remove('flag_ru');
+      languageBtn.querySelector('i').classList.add('flag_en');
+      langRu.classList.remove('active');
+      langEn.classList.add('active');
+
+      langBoxBurger.querySelector('i').classList.remove('flag_ru');
+      langBoxBurger.querySelector('i').classList.add('flag_en');
+      langBoxBurger.querySelector('p').innerHTML = 'en';
+    }
+
   });
 
 })();

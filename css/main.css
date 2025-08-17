@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #000000;
+}
+
 a {
   text-decoration: none;
 }
@@ -18,7 +22,7 @@ a {
 
 .first {
   width: 100%;
-  background-image: url(../img/img/first/bg.png);
+  background-image: url(../img/img/first/bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -884,6 +888,17 @@ main {
   }
 
   @media(max-width: 1020px) {
+    font-size: 24px;
+    max-width: 450px;
+    line-height: 32px;
+  }
+
+  @media(max-width: 890px) {
+    font-size: 18px;
+    max-width: 350px;
+    line-height: 24px;
+  }
+  @media(max-width: 768px) {
     font-size: 14px;
     max-width: 280px;
     line-height: 18px;
@@ -1249,6 +1264,10 @@ main {
 
   @media(max-width: 1440px) {
     width: calc((100%/3) - 7px);
+  }
+
+  @media(max-width: 1260px) {
+    width: calc((100%/3) - 10px);
   }
 
   @media(max-width: 767px) {
@@ -1687,10 +1706,10 @@ main {
   }
 
   @media(max-width: 1020px) {
-    height: 148px;
+    height: 125px;
   }
 
-  @media(max-width: 1020px) {
+  @media(max-width: 767px) {
     height: 50px;
   }
 
@@ -1778,6 +1797,12 @@ main {
     left: -15px;
     top: -65px;
     transform: scale(1)
+  }
+  @media(max-width: 850px) {
+    width: 393px;
+    left: -15px;
+    top: -65px;
+    transform: scale(.9)
   }
 
   @media(max-width: 767px) {
