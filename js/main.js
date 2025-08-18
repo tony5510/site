@@ -15,48 +15,27 @@
 
 //src update
 (() => {
+  const logoImage = document.querySelector('.logo_header');
+  const planetImage = document.querySelector('.eighth_box_card_persona')
 
   function updateLogoFor1020() {
     if (window.innerWidth <= 1020) {
-      const logoImage = document.querySelector('.logo_header');
-      const planetImage = document.querySelector('.eighth_box_card_persona')
-      if (logoImage) {
-        logoImage.src = './img/icon/logo-1020.svg';
-        planetImage.src = './img/img/eighth/persona2.png';
-      }
-      else {
-        logoImage.src = './img/icon/logo.svg';
-        planetImage.src = './img/img/eighth/persona.png';
-      }
+
+      logoImage.src = './img/icon/logo-1020.svg';
+      planetImage.src = './img/img/eighth/persona2.png';
+    } else {
+      logoImage.src = './img/icon/logo.svg';
+      planetImage.src = './img/img/eighth/persona.png';
     }
   }
 
   window.addEventListener('load', updateLogoFor1020);
-  window.addEventListener('resize', updateLogoFor1020);
+window.addEventListener('resize', updateLogoFor1020);
 
 
-})();
+}) ();
 
 
-//src update
-(() => {
-  const logoImage = document.querySelector('.js_main_planet_img');
-
-  function updateLogoFor768() {
-    if (window.innerWidth <= 768) {
-      
-      logoImage.src = './img/img/first/planet-768.webp';
-    }else {
-        logoImage.src = './img/img/first/planet.webp';
-      }
-    
-  }
-
-  window.addEventListener('load', updateLogoFor768);
-  window.addEventListener('resize', updateLogoFor768);
-
-
-})();
 
 
 
@@ -64,7 +43,7 @@
 (() => {
 
   function updateLogoFor440() {
-    if (window.innerWidth <= 767 ) {
+    if (window.innerWidth <= 767) {
       const logoImage = document.querySelector('.logo_header');
       logoImage.src = './img/icon/logo-440.svg';
     }
@@ -86,7 +65,7 @@
   let langEn = document.querySelector('.js_language_item-en');
   let langRu = document.querySelector('.js_language_item-ru');
   let langBoxBurger = document.querySelector('.js_menu_language_btn');
-  
+
 
   if (languageBtn) {
     languageBtn.addEventListener('click', function () {
@@ -196,7 +175,7 @@
     let langRu = document.querySelector('.js_language_item-ru');
     let langBoxBurger = document.querySelector('.js_menu_language_btn');
 
-    if(savedLang == 'ru'){
+    if (savedLang == 'ru') {
       languageBtn.querySelector('span').innerHTML = 'ru';
       languageBtn.querySelector('i').classList.remove('flag_en');
       languageBtn.querySelector('i').classList.add('flag_ru');
@@ -206,7 +185,7 @@
       langBoxBurger.querySelector('i').classList.remove('flag_en');
       langBoxBurger.querySelector('i').classList.add('flag_ru');
       langBoxBurger.querySelector('p').innerHTML = 'ru';
-    }else{
+    } else {
       languageBtn.querySelector('span').innerHTML = 'en';
       languageBtn.querySelector('i').classList.remove('flag_ru');
       languageBtn.querySelector('i').classList.add('flag_en');
@@ -241,12 +220,12 @@
     })
   }
 
-  if(burgerItem){
-      burgerItem.addEventListener('click', function(){
-        burgerBox.classList.remove('active');
-        burgerItemBox.classList.add('active');
-      })
-    
+  if (burgerItem) {
+    burgerItem.addEventListener('click', function () {
+      burgerBox.classList.remove('active');
+      burgerItemBox.classList.add('active');
+    })
+
   }
 
   document.addEventListener('click', (e) => {
@@ -273,12 +252,12 @@
 
 //console
 (() => {
- 
+
   let consoleBtn = document.querySelectorAll('.js_header_console');
 
-  if(consoleBtn){
-    for(let i = 0; i < consoleBtn.length; i++){
-      consoleBtn[i].addEventListener('click', function(){
+  if (consoleBtn) {
+    for (let i = 0; i < consoleBtn.length; i++) {
+      consoleBtn[i].addEventListener('click', function () {
         this.classList.toggle('turn_on');
       })
     }
