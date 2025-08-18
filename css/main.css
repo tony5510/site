@@ -812,14 +812,20 @@ main {
     background-image: url(../img/img/second/bg3.png);
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     padding-top: 24px;
-    height: 620px;
-    background-image: url(../img/img/second/bg3.png);
+    height: 794px;
   }
+
+  @media(max-width: 667px) {
+    padding-top: 24px;
+    height: 694px;
+  }
+
 
   @media(max-width: 500px) {
     background-image: url(../img/img/second/bg4.png);
+    height: 650px;
   }
 
   @media(max-width: 430px) {
@@ -845,7 +851,7 @@ main {
     padding-top: 69px;
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 667px) {
     background-image: url(../img/img/second/box2.png);
     width: calc(100% - 0px);
     margin-left: auto;
@@ -902,7 +908,12 @@ main {
   pointer-events: none;
   user-select: none;
 
-  @media(max-width: 767px) {
+  @media(max-width: 567px) {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  @media(max-width: 500px) {
     width: 50px;
     height: 50px;
     flex-shrink: 0;
@@ -933,7 +944,7 @@ main {
 .second_box p {
   max-width: 392px;
   width: 100%;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 28px;
   line-height: 40px;
   color: #FFFFFF;
@@ -950,12 +961,17 @@ main {
   }
 
   @media(max-width: 890px) {
-    font-size: 18px;
-    max-width: 350px;
-    line-height: 24px;
+    font-size: 24px;
+    max-width: 531px;
+    line-height: 40px;
   }
 
-  @media(max-width: 768px) {
+  @media(max-width: 668px) {
+    font-size: 20px;
+    max-width: 440px;
+    line-height: 32px;
+  }
+  @media(max-width: 490px) {
     font-size: 14px;
     max-width: 280px;
     line-height: 18px;
@@ -981,14 +997,14 @@ main {
     left: 50px;
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 667px) {
     transform: scale(.6);
     left: -20px;
     bottom: -20px;
     z-index: 4;
   }
 
-  @media(max-width: 640px) {
+  @media(max-width: 567px) {
     transform: scale(.4);
     left: -40px;
     bottom: -50px;
@@ -1018,6 +1034,8 @@ main {
   background-position: right bottom;
   background-size: cover;
   z-index: 3;
+  pointer-events: none;
+  user-select: none;
 
   @media(max-width: 1712px) {
     right: 2.5vw;
@@ -1043,7 +1061,7 @@ main {
     right: 3.5vw;
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 567px) {
     background-image: url(../img/img/second/hello5.png);
     width: 292px;
     height: 417px;
@@ -1126,11 +1144,17 @@ main {
     background-image: url(../img/img/video/box2.png);
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
+    width: calc(100% - 64px);
+    margin-left: 32px;
+    margin-right: 32px;
+    height: 58vw;
+    background-image: url(../img/img/video/box2.png);
+  }
+  @media(max-width: 668px) {
     width: calc(100% - 40px);
     margin-left: 20px;
     margin-right: 20px;
-    height: 55vw;
     background-image: url(../img/img/video/box2.png);
   }
 
@@ -1138,7 +1162,6 @@ main {
     width: calc(100% - 24px);
     margin-left: 12px;
     margin-right: 12px;
-    height: 55vw;
     background-image: url(../img/img/video/box2.png);
   }
 
@@ -2337,7 +2360,7 @@ main {
 
   @media(max-width: 767px) {
     margin-top: 15px;
-    background-image: none;
+    background-size: cover;
     gap: 14px 10px;
   }
 }
@@ -2351,11 +2374,28 @@ main {
 
   @media(max-width: 1020px) {
     height: auto;
+    padding-bottom: 10px;
   }
 
   @media(max-width: 767px) {
     width: calc(50% - 5px);
+    padding-top: 10px;
   }
+  @media(max-width: 510px) {
+    height: 270px;
+  }
+  @media(max-width: 459px) {
+    height: 290px;
+  }
+  @media(max-width: 370px) {
+   height: 315px;
+  }
+  @media(max-width: 337px) {
+    height: 325px;
+   }
+   @media(max-width: 330px) {
+    height: 355px;
+   }
 }
 
 .seventh_box_item_icon {
